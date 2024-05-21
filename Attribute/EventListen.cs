@@ -1,7 +1,6 @@
-namespace EventSystem.Attribute;
+using System;
 
-
-public class EventListen : System.Attribute
+public class EventListen : Attribute
 {  
     EventPriority eventPriority;
     public EventListen(EventPriority eventPriority)

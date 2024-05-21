@@ -1,5 +1,3 @@
-namespace EventSystem;
-
 public class Event
 {
     public string EventName;

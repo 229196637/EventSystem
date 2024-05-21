@@ -1,12 +1,13 @@
+using System.Collections.Generic;
 using System.Reflection;
-using EventSystem.Attribute;
-
-namespace EventSystem;
+using DefaultNamespace.EventSystem.Events;
+using UnityEngine;
 
 public class EventHandler
 {
     //这里实现方法有很多，懒得新建类了，就使用这一种了
     private Dictionary<int,Dictionary<string,List<MethodInfo>>> eveDic;
+    
 
     public EventHandler()
     {
@@ -17,7 +18,9 @@ public class EventHandler
             Dictionary<string, List<MethodInfo>> dic = new Dictionary<string, List<MethodInfo>>();
             eveDic.Add(i,dic);
         }
+        
     }
+    
 
     public void AddEvent(EventPriority eventPriority,string eventName, MethodInfo method)
     {
